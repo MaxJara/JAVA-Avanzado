@@ -1,8 +1,9 @@
-package com.maxjara.amazonviewer.db;
+package com.anncode.amazonviewer.db;
+
+import static com.anncode.amazonviewer.db.DataBase.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import static com.maxjara.amazonviewer.db.DataBase.*;
 
 public interface IDBConnection {
 	
@@ -12,6 +13,9 @@ public interface IDBConnection {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(URL+DB, USER, PASSWORD);
+			if (connection != null) {
+				System.out.println("Se estableció la conexión :)");
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

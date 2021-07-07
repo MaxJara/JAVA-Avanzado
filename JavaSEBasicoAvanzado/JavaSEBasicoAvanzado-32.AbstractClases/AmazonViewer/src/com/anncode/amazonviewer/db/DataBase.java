@@ -1,4 +1,4 @@
-package com.maxjara.amazonviewer.db;
+package com.anncode.amazonviewer.db;
 
 public class DataBase {
 
